@@ -369,10 +369,10 @@ body {
 
 .tail {
   position: absolute;
-  top: 150px;
-  right: -108px;
-  width: 160px;
-  height: 220px;
+  top: 232px;
+  right: -70px;
+  width: 180px;
+  height: 240px;
   z-index: 0;
 }
 
@@ -382,42 +382,47 @@ body {
   box-shadow: inset -4px -4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* base sits UNDER the body (z-index 0 vs body's z-index 1) so the seam
+   is hidden by the body's edge instead of floating in empty space */
 .tail-seg.base {
-  width: 46px;
-  height: 70px;
-  left: 6px;
-  top: 0;
+  width: 62px;
+  height: 86px;
+  left: -18px;
+  top: 6px;
   border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
-  transform: rotate(18deg);
+  transform: rotate(10deg);
+  transform-origin: bottom left;
 }
 
 .tail-seg.mid {
-  width: 40px;
-  height: 90px;
+  width: 46px;
+  height: 98px;
   left: 30px;
-  top: 46px;
+  top: 44px;
   border-radius: 20% 40% 30% 60% / 40% 30% 60% 40%;
-  transform: rotate(-26deg);
+  transform: rotate(-28deg);
+  transform-origin: top left;
 }
 
 .tail-seg.tip {
-  width: 34px;
-  height: 78px;
-  left: 88px;
+  width: 38px;
+  height: 84px;
+  left: 66px;
   top: 108px;
   border-radius: 10% 40% 10% 60% / 40% 20% 70% 30%;
-  transform: rotate(30deg);
+  transform: rotate(32deg);
+  transform-origin: top left;
 }
 
 .tail-shade {
   position: absolute;
-  left: 14px;
-  top: 6px;
-  width: 20px;
-  height: 40px;
+  left: -6px;
+  top: 14px;
+  width: 26px;
+  height: 46px;
   background: var(--pika-brown-light);
   border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
-  transform: rotate(18deg);
+  transform: rotate(10deg);
   opacity: 0.85;
 }
 
